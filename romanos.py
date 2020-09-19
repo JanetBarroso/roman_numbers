@@ -1,6 +1,3 @@
 def romans(entero):
-    if entero == 1:
-        romanito = "I"
-    elif entero == 5:
-        romanito = "V"
-    return romanito
+    equivalents={1:"I", 5:"V"}
+    return equivalents[entero]
