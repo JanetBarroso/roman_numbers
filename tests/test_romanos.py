@@ -22,3 +22,13 @@ def test_romans_for_2():
 def test_romans_for_3():
     assert romans(3) == "III"
 
+
+def test_romans_for_4():
+    assert romans(4) == "IV"
+
+def test_romans_for_5():
+    assert romans(5) == "V"
+
+
+def test_romans_for_6():
+    assert romans(6) == "VI"
