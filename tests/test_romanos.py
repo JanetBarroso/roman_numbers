@@ -1,4 +1,4 @@
-from romanos import romans
+from romanos import romans, haz_palitos, string_patterns
 
 
 def test_romans_for_one_is_I():
@@ -32,3 +32,11 @@ def test_romans_for_5():
 
 def test_romans_for_6():
     assert romans(6) == "VI"
+
+def test_haz_palitos():
+    assert haz_palitos(3) == "III"
+
+
+def test_string_patterns():
+    assert string_patterns("III") == "III"
+    assert string_patterns("IIIII") == "V"
