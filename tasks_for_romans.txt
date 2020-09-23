@@ -1,0 +1,8 @@
+objectiv: to convert integeer into roman numbers
+
+tasks:  1) Define dictionary with equivalents (I,V,X,L,C,D,M)
+	2) Given a number- find the closest defined roman number
+	3) Given a number- pick the elements needed to construct that number
+	4) Define sum and substraction 
+
+		
