@@ -22,7 +22,8 @@ def haz_palitos(entero):
 
 
 def string_patterns (string_palitos):
-    if string_palitos == "III":
-        return "III"
-    elif string_palitos == "IIIII":
-        return "V"
+
+    cuantos_palitos = string_palitos.count("I")
+    if cuantos_palitos in list(EQUIVALENTS):
+        return EQUIVALENTS[cuantos_palitos]
+    return string_palitos
