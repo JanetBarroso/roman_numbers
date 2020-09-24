@@ -25,5 +25,11 @@ def string_patterns (string_palitos):
 
     cuantos_palitos = string_palitos.count("I")
     if cuantos_palitos in list(EQUIVALENTS):
-        return EQUIVALENTS[cuantos_palitos]
+        return string_palitos.replace(
+            string_palitos,EQUIVALENTS[cuantos_palitos])
+    elif 5 < cuantos_palitos < 10:
+        return string_palitos.replace("IIIII", "V")
+    elif 10 < cuantos_palitos < 50:
+        return string_palitos.replace("IIIIIIIIII","X")
+
     return string_palitos

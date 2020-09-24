@@ -40,3 +40,15 @@ def test_haz_palitos():
 def test_string_patterns():
     assert string_patterns("III") == "III"
     assert string_patterns("IIIII") == "V"
+    assert string_patterns("IIIIIIIIII") == "X"
+
+
+def test_replace_6_8_palitos_w_V():
+    assert (string_patterns("IIIIII")) == "VI"
+    assert (string_patterns("IIIIIII")) == "VII"
+    assert (string_patterns("IIIIIIII")) == "VIII"
+    assert (string_patterns("IIIIIIIII")) =="VIIII"
+
+def test_replace_palitos_w_X_():
+    assert(string_patterns("IIIIIIIIIII")) == "XI"
+    assert (string_patterns("IIIIIIIIIIIIIII")) =="XV"
