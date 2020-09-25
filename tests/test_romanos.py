@@ -47,7 +47,7 @@ def test_replace_6_8_palitos_w_V():
     assert (string_patterns("IIIIII")) == "VI"
     assert (string_patterns("IIIIIII")) == "VII"
     assert (string_patterns("IIIIIIII")) == "VIII"
-    #assert (string_patterns("IIIIIIIII")) =="VIIII"
+    assert (string_patterns("IIIIIIIII")) =="IX"
 
 def test_romans_from1_to5():
     assert (string_patterns("IIII")) == "IV"
@@ -58,3 +58,15 @@ def test_replace_palitos_w_X_():
     assert(string_patterns("IIIIIIIIIII")) == "XI"
     assert (string_patterns("IIIIIIIIIIIIIII")) =="XV"
     assert (string_patterns("IIIIIIIIIIIIIIII")) == "XVI"
+    assert string_patterns("IIIIIIIIIIIIII") == "XIV"
+
+def test_33():
+    assert (string_patterns("IIIIIIIIIIII"
+                            "IIIIIIIIIIII"
+                            "IIIIIIIII")) == "XXXIII"
+
+def test_36():
+    assert (string_patterns("IIIIIIIIIIIII"
+                            "IIIIIIIIIIIII"
+                            "IIIIIIII")) == "XXXIV"
+
