@@ -70,3 +70,7 @@ def test_36():
                             "IIIIIIIIIIIII"
                             "IIIIIIII")) == "XXXIV"
 
+def test_39():
+    assert (string_patterns("IIIIIIIIIIIII"
+                            "IIIIIIIIIIIII"
+                            "IIIIIIIIIIIII")) == "XXXIX"

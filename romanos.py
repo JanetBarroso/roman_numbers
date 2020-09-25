@@ -47,7 +47,7 @@ def string_patterns(string_palitos):
 
     elif EQ_VAL[2] < cuantos_palitos < EQ_VAL[3]:
         how_many_X = int(cuantos_palitos / 10)
-        resto = cuantos_palitos - (how_many_X * 10)
+        resto = cuantos_palitos - (how_many_X * 10)#9
         how_many_V = int(resto / 5)
         resto = resto - (how_many_V * 5)
         if resto > 3:
