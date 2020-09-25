@@ -1,6 +1,7 @@
+
 EQUIVALENTS = {1: "I", 5: "V", 10: "X", 50: "L",
                100: "C", 500: "D", 1000: "M"}
-
+EQ_VAL = list(EQUIVALENTS)
 
 def romans(entero):
     if entero <= 0:
@@ -23,17 +24,19 @@ def haz_palitos(entero):
 
 def string_patterns(string_palitos):
     cuantos_palitos = string_palitos.count("I")
-    if cuantos_palitos in list(EQUIVALENTS):
+    if cuantos_palitos in EQ_VAL:
         return string_palitos.replace(
             string_palitos, EQUIVALENTS[cuantos_palitos]
         )
-    elif list(EQUIVALENTS)[1] < cuantos_palitos < list(EQUIVALENTS)[2]:
-        return "V" + haz_palitos(cuantos_palitos % list(EQUIVALENTS)[1])
+    elif EQ_VAL[1] < cuantos_palitos < EQ_VAL[2]:
+        return "V" + haz_palitos(cuantos_palitos%EQ_VAL[1])
 
-    elif list(EQUIVALENTS)[2] < cuantos_palitos < list(EQUIVALENTS)[3]:
-        how_many_X = int(cuantos_palitos / list(EQUIVALENTS)[2])#
+    elif EQ_VAL[2] < cuantos_palitos < EQ_VAL[3]:
+        how_many_X = int(cuantos_palitos / EQ_VAL[2])
         resto = cuantos_palitos - (how_many_X * 10)
-        if resto in list(EQUIVALENTS):
+        if resto in EQ_VAL:
             return "X" * how_many_X + EQUIVALENTS[resto]
         return "X"*how_many_X + haz_palitos(resto)
+    elif cuantos_palitos==4:
+        return "IV"
     return string_palitos
